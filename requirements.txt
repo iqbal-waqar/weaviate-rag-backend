@@ -16,5 +16,8 @@ weaviate-client==3.26.7
 # Document Processing
 pypdf==5.9.0
 
+# Embeddings (required for Weaviate queries)
+sentence-transformers==5.1.0
+
 # Environment Variables
 python-dotenv==1.0.1
