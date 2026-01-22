@@ -70,12 +70,11 @@ class WeaviateService:
         client = self.get_client()
         embeddings = self.embeddings_service.get_embeddings()
         
-        # Use Weaviate's built-in vectorization (text2vec module)
         return Weaviate(
             client=client,
             index_name=self.INDEX_NAME,
             text_key="text",
             embedding=embeddings,
-            by_text=True  # Use Weaviate's vectorization instead of local embeddings
+            by_text=False  # Use local embeddings for queries
         )
 
