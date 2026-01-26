@@ -1,10 +1,8 @@
 import sys
 import os
 
-# Add backend directory to Python path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'backend'))
 
-# Import the app from backend.main (not just 'main' to avoid circular import)
 from backend.main import app
 
 # This allows Railway to auto-detect and run with uvicorn
